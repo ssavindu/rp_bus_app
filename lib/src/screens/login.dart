@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Find My bus'),
+        title: Text('Bus App'),
       ),
       body: SafeArea(
         child: ListView(
@@ -39,30 +39,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             TextFormField(
               decoration: InputDecoration(
-                  labelText: 'Email',
+                  labelText: 'RPC URL',
                   labelStyle: TextStyle(fontSize: 20),
                   filled: true),
               validator: (value) {
                 if (value == null || value.isEmpty || !isValidEmail(value)) {
                   return 'Please enter valid Email';
-                } else {
-                  return null;
-                }
-              },
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Password',
-                labelStyle: TextStyle(fontSize: 20),
-                filled: true,
-              ),
-              obscureText: true,
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter Password';
                 } else {
                   return null;
                 }
@@ -81,10 +63,10 @@ class _LoginPageState extends State<LoginPage> {
                         textStyle: const TextStyle(fontSize: 20),
                         primary: Colors.green[800]),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/search');
+                      Navigator.pushNamed(context, '/home');
                     },
                     child: Text(
-                      'Login',
+                      'Save',
                     ),
                   ),
                 ),

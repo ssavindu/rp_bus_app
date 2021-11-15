@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:bus_app/src/screens/login.dart';
-import 'dart:ui';
+import 'package:bus_app/src/screens/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
       },
       // home: AvailableBusListPage(),
       theme: ThemeData.dark(),
